@@ -1,0 +1,144 @@
+:root {
+    --primary-color: #e50914;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background: #000;
+    color: #fff;
+}
+
+/* Background Image & Gradient Overlay */
+.showcase {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: url('https://assets.nflxext.com/ffe/siteui/vlv3/f841d4c7-10e1-40af-bcae-07a3f8dc141a/f6d7434e-d6de-4185-a6d4-c77a2d08737b/US-en-20220502-popsignuptwoweeks-perspective_alpha_website_small.jpg') no-repeat center center/cover;
+}
+
+.showcase::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.5);
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%);
+}
+
+/* Navbar */
+.showcase-top {
+    position: relative;
+    z-index: 2;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+}
+
+.showcase-top img {
+    width: 150px;
+}
+
+/* Main Text Content */
+.showcase-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 15vh;
+    padding: 0 5%;
+}
+
+.showcase-content h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    max-width: 800px;
+}
+
+.showcase-content h3 {
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+}
+
+.showcase-content p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+/* Form Inputs */
+.email-form {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 700px;
+    margin-top: 1rem;
+}
+
+.email-form input {
+    flex: 1;
+    padding: 1.2rem;
+    font-size: 1.1rem;
+    border: 1px solid #8c8c8c;
+    border-radius: 2px 0 0 2px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background: var(--primary-color);
+    color: #fff;
+    padding: 0.4rem 1.3rem;
+    font-size: 1rem;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.2s ease;
+}
+
+.btn:hover {
+    background: #f40612;
+}
+
+.btn-rounded {
+    border-radius: 4px;
+}
+
+.btn-lg {
+    padding: 1rem 1.5rem;
+    font-size: 1.6rem;
+    border-radius: 0 2px 2px 0;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 960px) {
+    .showcase-content h1 { font-size: 3rem; }
+    .showcase-top img { width: 120px; }
+}
+
+@media (max-width: 700px) {
+    .showcase-content h1 { font-size: 2rem; }
+    .showcase-content h3 { font-size: 1.2rem; }
+    .showcase-top img { width: 100px; }
+    .email-form { flex-direction: column; align-items: center; }
+    .email-form input { width: 100%; margin-bottom: 15px; border-radius: 2px; }
+    .btn-lg { width: 100%; border-radius: 2px; font-size: 1.2rem; }
+}
