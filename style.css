@@ -1,145 +1,520 @@
-:root {
-    --primary-color: #e50914;
+/* =========================================================
+   STREAMING UI CLONE CSS
+========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
 }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+
+
+/* =========================================================
+   BODY
+========================================================= */
+
+body{
+
+    font-family:'Poppins', sans-serif;
+
+    background:#020617;
+
+    color:white;
+
+    overflow-x:hidden;
+
 }
 
-body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    background: #000;
-    color: #fff;
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+header{
+
+    position:fixed;
+
+    top:0;
+
+    width:100%;
+
+    padding:20px 8%;
+
+    background:rgba(2,6,23,0.95);
+
+    backdrop-filter:blur(10px);
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    z-index:1000;
+
 }
 
-/* Background Image & Gradient Overlay */
-.showcase {
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    /* Replaced official Netflix CDN image with a generic safe Unsplash movie background */
-    background: url('https://images.unsplash.com/photo-1574267432553-4b4628081c31?q=80&w=2070&auto=format&fit=crop') no-repeat center center/cover;
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo h1{
+
+    font-size:38px;
+
+    font-weight:700;
+
 }
 
-.showcase::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    background: rgba(0, 0, 0, 0.5);
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%);
+.logo span{
+
+    color:#2563eb;
+
 }
 
-/* Navbar */
-.showcase-top {
-    position: relative;
-    z-index: 2;
-    height: 90px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 5%;
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+nav{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
 }
 
-.showcase-top img {
-    width: 150px;
+nav a{
+
+    color:white;
+
+    text-decoration:none;
+
+    margin-left:25px;
+
+    font-size:16px;
+
+    transition:0.3s;
+
 }
 
-/* Main Text Content */
-.showcase-content {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-top: 15vh;
-    padding: 0 5%;
+nav a:hover{
+
+    color:#2563eb;
+
 }
 
-.showcase-content h1 {
-    font-size: 4rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    max-width: 800px;
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+
+    min-height:100vh;
+
+    background:
+        linear-gradient(rgba(0,0,0,0.6),
+        rgba(0,0,0,0.7)),
+        url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=1600&auto=format&fit=crop');
+
+    background-size:cover;
+
+    background-position:center;
+
+    display:flex;
+
+    align-items:center;
+
+    padding:150px 8%;
+
 }
 
-.showcase-content h3 {
-    font-size: 1.6rem;
-    font-weight: 400;
-    margin-bottom: 1.5rem;
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.hero-content{
+
+    max-width:700px;
+
 }
 
-.showcase-content p {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
+.hero-content h1{
+
+    font-size:65px;
+
+    line-height:1.2;
+
+    margin-bottom:25px;
+
 }
 
-/* Form Inputs */
-.email-form {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    max-width: 700px;
-    margin-top: 1rem;
+.hero-content p{
+
+    font-size:18px;
+
+    color:#cbd5e1;
+
+    line-height:1.9;
+
+    margin-bottom:35px;
+
 }
 
-.email-form input {
-    flex: 1;
-    padding: 1.2rem;
-    font-size: 1.1rem;
-    border: 1px solid #8c8c8c;
-    border-radius: 2px 0 0 2px;
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
 }
 
-/* Buttons */
-.btn {
-    display: inline-block;
-    background: var(--primary-color);
-    color: #fff;
-    padding: 0.4rem 1.3rem;
-    font-size: 1rem;
-    text-align: center;
-    border: none;
-    cursor: pointer;
-    border-radius: 3px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: background 0.2s ease;
+.btn-primary,
+
+.btn-secondary{
+
+    padding:14px 28px;
+
+    border:none;
+
+    border-radius:8px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
 }
 
-.btn:hover {
-    background: #f40612;
+.btn-primary{
+
+    background:#2563eb;
+
+    color:white;
+
 }
 
-.btn-rounded {
-    border-radius: 4px;
+.btn-primary:hover{
+
+    background:#1d4ed8;
+
+    transform:translateY(-3px);
+
 }
 
-.btn-lg {
-    padding: 1rem 1.5rem;
-    font-size: 1.6rem;
-    border-radius: 0 2px 2px 0;
+.btn-secondary{
+
+    background:rgba(255,255,255,0.15);
+
+    color:white;
+
+    border:1px solid rgba(255,255,255,0.2);
+
 }
 
-/* Mobile Responsiveness */
-@media (max-width: 960px) {
-    .showcase-content h1 { font-size: 3rem; }
-    .showcase-top img { width: 120px; }
+.btn-secondary:hover{
+
+    background:rgba(255,255,255,0.25);
+
 }
 
-@media (max-width: 700px) {
-    .showcase-content h1 { font-size: 2rem; }
-    .showcase-content h3 { font-size: 1.2rem; }
-    .showcase-top img { width: 100px; }
-    .email-form { flex-direction: column; align-items: center; }
-    .email-form input { width: 100%; margin-bottom: 15px; border-radius: 2px; }
-    .btn-lg { width: 100%; border-radius: 2px; font-size: 1.2rem; }
+
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+.section{
+
+    padding:100px 8%;
+
+}
+
+
+
+/* =========================================================
+   SECTION TITLE
+========================================================= */
+
+.section-title{
+
+    font-size:42px;
+
+    margin-bottom:40px;
+
+}
+
+
+
+/* =========================================================
+   MOVIE GRID
+========================================================= */
+
+.movie-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:25px;
+
+}
+
+
+
+/* =========================================================
+   MOVIE CARD
+========================================================= */
+
+.movie-card{
+
+    background:#0f172a;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    transition:0.3s;
+
+    cursor:pointer;
+
+}
+
+.movie-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+
+
+/* =========================================================
+   MOVIE IMAGE
+========================================================= */
+
+.movie-card img{
+
+    width:100%;
+
+    height:350px;
+
+    object-fit:cover;
+
+}
+
+
+
+/* =========================================================
+   MOVIE INFO
+========================================================= */
+
+.movie-info{
+
+    padding:20px;
+
+}
+
+.movie-info h3{
+
+    margin-bottom:10px;
+
+    font-size:22px;
+
+}
+
+.movie-info p{
+
+    color:#94a3b8;
+
+}
+
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+
+    background:#000;
+
+    text-align:center;
+
+    padding:30px 8%;
+
+    color:#94a3b8;
+
+    line-height:1.8;
+
+}
+
+
+
+/* =========================================================
+   TABLET RESPONSIVE
+========================================================= */
+
+@media(max-width:1024px){
+
+    .hero{
+
+        text-align:center;
+
+        justify-content:center;
+
+    }
+
+    .hero-content h1{
+
+        font-size:52px;
+
+    }
+
+    .hero-buttons{
+
+        justify-content:center;
+
+    }
+
+}
+
+
+
+/* =========================================================
+   MOBILE RESPONSIVE
+========================================================= */
+
+@media(max-width:768px){
+
+    header{
+
+        flex-direction:column;
+
+        text-align:center;
+
+        padding:20px;
+
+    }
+
+    nav{
+
+        margin-top:20px;
+
+        justify-content:center;
+
+    }
+
+    nav a{
+
+        margin:10px;
+
+        font-size:15px;
+
+    }
+
+    .hero{
+
+        padding-top:260px;
+
+        text-align:center;
+
+        justify-content:center;
+
+    }
+
+    .hero-content h1{
+
+        font-size:40px;
+
+    }
+
+    .hero-content p{
+
+        font-size:16px;
+
+    }
+
+    .hero-buttons{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+    .btn-primary,
+
+    .btn-secondary{
+
+        width:220px;
+
+    }
+
+    .section-title{
+
+        font-size:34px;
+
+    }
+
+}
+
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media(max-width:480px){
+
+    .hero{
+
+        padding-top:320px;
+
+    }
+
+    .hero-content h1{
+
+        font-size:34px;
+
+    }
+
+    .logo h1{
+
+        font-size:32px;
+
+    }
+
 }
