@@ -318,6 +318,109 @@ nav a:hover{
     transform:translateY(-10px);
 
 }
+/* =========================================================
+   MOVIE CARD IMAGE EFFECT
+========================================================= */
+
+.movie-card img{
+
+    transition:0.4s ease;
+
+}
+
+.movie-card:hover img{
+
+    transform:scale(1.05);
+
+}
+
+
+
+/* =========================================================
+   RESPONSIVE MOVIE GRID
+========================================================= */
+
+.movie-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
+    gap:25px;
+
+}
+
+
+
+/* =========================================================
+   RESPONSIVE MOVIE CARDS
+========================================================= */
+
+.movie-card{
+
+    width:100%;
+
+}
+
+
+
+/* =========================================================
+   MOBILE RESPONSIVE
+========================================================= */
+
+@media(max-width:768px){
+
+    .movie-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:18px;
+
+    }
+
+    .movie-card img{
+
+        height:260px;
+
+    }
+
+    .movie-info h3{
+
+        font-size:16px;
+
+    }
+
+    .movie-info p{
+
+        font-size:13px;
+
+    }
+
+}
+
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media(max-width:480px){
+
+    .movie-grid{
+
+        grid-template-columns:1fr 1fr;
+
+        gap:14px;
+
+    }
+
+    .movie-card img{
+
+        height:220px;
+
+    }
+
+}
 
 
 
