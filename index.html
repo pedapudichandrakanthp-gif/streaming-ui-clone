@@ -1,317 +1,45 @@
-<!-- ================= TRENDING ================= -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Netflix Clone</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <h1 class="logo">NETFLIX</h1>
+    <button id="login-btn" class="sign-in-btn">Sign In</button>
+  </nav>
 
-<section class="section">
-
-    <h2 class="section-title">
-        Trending
-    </h2>
-
-    <div class="movie-grid">
-
-        <div class="movie-card">
-            <img src="images/spider-noir.jpg" alt="Spider-Noir">
-            <div class="movie-info">
-                <h3>Spider-Noir</h3>
-                <p>Action • Thriller</p>
-            </div>
-        </div>
-
-        <div class="movie-card">
-            <img src="images/remarkably-bright-creatures.jpg" alt="Remarkably Bright Creatures">
-            <div class="movie-info">
-                <h3>Remarkably Bright Creatures</h3>
-                <p>Drama • Adventure</p>
-            </div>
-        </div>
-
-        <div class="movie-card">
-            <img src="images/ladies-first.jpg" alt="Ladies First">
-            <div class="movie-info">
-                <h3>Ladies First</h3>
-                <p>Drama • Comedy</p>
-            </div>
-        </div>
-
-        <div class="movie-card">
-            <img src="images/lord-of-the-flies.jpg" alt="Lord of the Flies">
-            <div class="movie-info">
-                <h3>Lord of the Flies</h3>
-                <p>Adventure • Drama</p>
-            </div>
-        </div>
-
-        <div class="movie-card">
-            <img src="images/jack-ryan.jpg" alt="Jack Ryan">
-            <div class="movie-info">
-                <h3>Jack Ryan: Ghost War</h3>
-                <p>Action • Spy</p>
-            </div>
-        </div>
-
-        <div class="movie-card">
-            <img src="images/maximum-pleasure.jpg" alt="Maximum Pleasure Guaranteed">
-            <div class="movie-info">
-                <h3>Maximum Pleasure Guaranteed</h3>
-                <p>Comedy • Drama</p>
-            </div>
-        </div>
-
+  <div id="login-modal" class="modal hidden">
+    <div class="modal-content">
+      <span id="close-modal" class="close">&times;</span>
+      <h2>Sign In</h2>
+      <form id="login-form">
+        <input type="email" placeholder="Email or phone number" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit" class="submit-btn">Sign In</button>
+      </form>
     </div>
+  </div>
 
-</section>
-
-
-
-<!-- ================= MOVIES ================= -->
-
-<section class="section">
-
-    <h2 class="section-title">
-        Movies
-    </h2>
-
-    <div class="movie-grid">
-
-        <div class="movie-card">
-            <img src="images/swapped.jpg" alt="Swapped">
-            <div class="movie-info">
-                <h3>Swapped</h3>
-                <p>Comedy • Romance</p>
-            </div>
-        </div>
-
-        <div class="movie-card">
-            <img src="images/devil-prada.jpg" alt="The Devil Wears Prada 2">
-            <div class="movie-info">
-                <h3>The Devil Wears Prada 2</h3>
-                <p>Fashion • Comedy</p>
-            </div>
-        </div>
-
-        <div class="movie-card">
-            <img src="images/the-bride.jpg" alt="The Bride">
-            <div class="movie-info">
-                <h3>The Bride!</h3>
-                <p>Fantasy • Horror</p>
-            </div>
-        </div>
-
-        <div class="movie-card">
-            <img src="images/in-the-grey.jpg" alt="In the Grey">
-            <div class="movie-info">
-                <h3>In the Grey</h3>
-                <p>Action • Crime</p>
-            </div>
-        </div>
-
-        <div class="movie-card">
-            <img src="images/black-phone.jpg" alt="Black Phone 2">
-            <div class="movie-info">
-                <h3>Black Phone 2</h3>
-                <p>Horror • Thriller</p>
-            </div>
-        </div>
-
-        <div class="movie-card">
-            <img src="images/ferrari.jpg" alt="Ferrari">
-            <div class="movie-info">
-                <h3>Ferrari</h3>
-                <p>Sports • Drama</p>
-            </div>
-        </div>
-
+  <header class="hero" id="hero-section">
+    <div class="hero-video-container" id="hero-video-container"></div>
+    <div class="hero-content">
+      <h1 id="hero-title">Loading...</h1>
+      <p id="hero-description"></p>
+      <div class="hero-buttons">
+        <button class="btn play-btn">▶ Play</button>
+        <button class="btn info-btn">ℹ More Info</button>
+      </div>
     </div>
+    <div class="hero-fade-bottom"></div>
+  </header>
 
-</section>
+  <main class="main-content" id="main-content">
+    </main>
 
-
-
-<!-- ================= SERIES ================= -->
-
-<section class="section">
-
-    <h2 class="section-title">
-        Series
-    </h2>
-
-    <div class="movie-grid">
-
-        <div class="movie-card">
-            <img src="images/dutton-ranch.jpg" alt="Dutton Ranch">
-            <div class="movie-info">
-                <h3>Dutton Ranch</h3>
-                <p>Western • Drama</p>
-            </div>
-        </div>
-
-        <div class="movie-card">
-            <img src="images/off-campus.jpg" alt="Off Campus">
-            <div class="movie-info">
-                <h3>Off Campus</h3>
-                <p>Romance • College</p>
-            </div>
-        </div>
-
-        <div class="movie-card">
-            <img src="images/nemesis.jpg" alt="Nemesis">
-            <div class="movie-info">
-                <h3>Nemesis</h3>
-                <p>Action • Mystery</p>
-            </div>
-        </div>
-
-        <div class="movie-card">
-            <img src="images/legends.jpg" alt="Legends">
-            <div class="movie-info">
-                <h3>Legends</h3>
-                <p>Adventure • Fantasy</p>
-            </div>
-        </div>
-
-        <div class="movie-card">
-            <img src="images/mating-season.jpg" alt="Mating Season">
-            <div class="movie-info">
-                <h3>Mating Season</h3>
-                <p>Comedy • Romance</p>
-            </div>
-        </div>
-
-        <div class="movie-card">
-            <img src="images/four-seasons.jpg" alt="The Four Seasons">
-            <div class="movie-info">
-                <h3>The Four Seasons</h3>
-                <p>Drama • Family</p>
-            </div>
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- ================= POPULAR ================= -->
-
-<section class="section">
-
-    <h2 class="section-title">
-        Popular
-    </h2>
-
-    <div class="movie-grid">
-
-        <div class="movie-card">
-            <img src="images/my-royal-nemesis.jpg" alt="My Royal Nemesis">
-            <div class="movie-info">
-                <h3>My Royal Nemesis</h3>
-                <p>Romance • Drama</p>
-            </div>
-        </div>
-
-        <div class="movie-card">
-            <img src="images/the-crash.jpg" alt="The Crash">
-            <div class="movie-info">
-                <h3>The Crash</h3>
-                <p>Thriller • Mystery</p>
-            </div>
-        </div>
-
-        <div class="movie-card">
-            <img src="images/kpop-demon.jpg" alt="KPop Demon Hunters">
-            <div class="movie-info">
-                <h3>KPop Demon Hunters</h3>
-                <p>Fantasy • Music</p>
-            </div>
-        </div>
-
-        <div class="movie-card">
-            <img src="images/deli-boys.jpg" alt="Deli Boys">
-            <div class="movie-info">
-                <h3>Deli Boys</h3>
-                <p>Comedy • Crime</p>
-            </div>
-        </div>
-
-        <div class="movie-card">
-            <img src="images/man-on-fire.jpg" alt="Man on Fire">
-            <div class="movie-info">
-                <h3>Man on Fire</h3>
-                <p>Action • Thriller</p>
-            </div>
-        </div>
-
-        <div class="movie-card">
-            <img src="images/good-omens.jpg" alt="Good Omens">
-            <div class="movie-info">
-                <h3>Good Omens</h3>
-                <p>Fantasy • Comedy</p>
-            </div>
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- ================= MY LIST ================= -->
-
-<section class="section">
-
-    <h2 class="section-title">
-        My List
-    </h2>
-
-    <div class="movie-grid">
-
-        <div class="movie-card">
-            <img src="images/the-boroughs.jpg" alt="The Boroughs">
-            <div class="movie-info">
-                <h3>The Boroughs</h3>
-                <p>Drama • Mystery</p>
-            </div>
-        </div>
-
-        <div class="movie-card">
-            <img src="images/system.jpg" alt="System">
-            <div class="movie-info">
-                <h3>System</h3>
-                <p>Sci-Fi • Action</p>
-            </div>
-        </div>
-
-        <div class="movie-card">
-            <img src="images/devil-may-cry.jpg" alt="Devil May Cry">
-            <div class="movie-info">
-                <h3>Devil May Cry</h3>
-                <p>Fantasy • Action</p>
-            </div>
-        </div>
-
-        <div class="movie-card">
-            <img src="images/good-girls-guide.jpg" alt="A Good Girl's Guide to Murder">
-            <div class="movie-info">
-                <h3>A Good Girl's Guide to Murder</h3>
-                <p>Mystery • Crime</p>
-            </div>
-        </div>
-
-        <div class="movie-card">
-            <img src="images/okja.jpg" alt="Okja">
-            <div class="movie-info">
-                <h3>Okja</h3>
-                <p>Adventure • Drama</p>
-            </div>
-        </div>
-
-        <div class="movie-card">
-            <img src="images/octopus-teacher.jpg" alt="My Octopus Teacher">
-            <div class="movie-info">
-                <h3>My Octopus Teacher</h3>
-                <p>Documentary • Nature</p>
-            </div>
-        </div>
-
-    </div>
-
-</section>
+  <script src="script.js"></script>
+</body>
+</html>
